@@ -1,0 +1,1 @@
+wget -O temp/$(date '+%Y-%m-%d') https://donnees.roulez-eco.fr/opendata/jour
