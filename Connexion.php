@@ -29,5 +29,13 @@ class Connexion {
         return $this->co;
     }
 
+	public function query(string $sql,Array $params = []){
+		$query = $this->co->prepare($sql, [
+			PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY
+		]);
+		$query->execute($params);
+		return $query;
+	}
+
 
 }
