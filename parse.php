@@ -1,4 +1,8 @@
 <?php
+require_once './Connexion.php';
+require_once 'env.php';
+$db = new Connexion($host, $databaseName, $password, $user, null);
+
 $file = 'temp/'.date('Ymd').'.xml';
 try{
     if (file_exists($file)) {
