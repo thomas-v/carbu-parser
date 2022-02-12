@@ -3,6 +3,8 @@ CREATE TABLE IF NOT EXISTS `pdv_liste` (
   `latitude` DOUBLE NOT NULL,
   `longitude` DOUBLE NOT NULL,
   `adresse` varchar(255) DEFAULT NULL,
+  `ville` varchar(50),
+  `cp` MEDIUMINT UNSIGNED,
   PRIMARY KEY (`pdv`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
