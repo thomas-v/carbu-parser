@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS `pdv_liste` (
   `pdv` int(11) NOT NULL,
-  `latitude` FLOAT NOT NULL,
-  `longitude` FLOAT NOT NULL,
+  `latitude` DOUBLE NOT NULL,
+  `longitude` DOUBLE NOT NULL,
   `adresse` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`pdv`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
