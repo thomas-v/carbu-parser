@@ -13,6 +13,7 @@ CREATE TABLE `carburants` (
   `pdv` int(11) NOT NULL,
   `type` varchar(255) NOT NULL,
   `prix` int(11) DEFAULT NULL,
+  `maj` date NOT NULL DEFAULT '0000-00-00',
   PRIMARY KEY (`id`),
   KEY `pdv` (`pdv`),
   CONSTRAINT `carburants_ibfk_1` FOREIGN KEY (`pdv`) REFERENCES `pdv_liste` (`pdv`)
