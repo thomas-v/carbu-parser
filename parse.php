@@ -8,7 +8,8 @@ try{
     if (file_exists($file)) {
         $pdv_liste = simplexml_load_file($file);
         foreach($pdv_liste as $pdv){
-            $sql = 'INSERT INTO pdv_liste VALUES (:pdv, :latitude, :longitude, :adresse, :ville, :cp)';
+            $sql = 'INSERT INTO pdv_liste VALUES (:pdv, :latitude, :longitude, :adresse, :ville, :cp) 
+                    ON DUPLICATE KEY UPDATE latitude=:latitude, longitude=:longitude, adresse=:adresse, ville=:ville, cp=:cp';
             $params = [
                 ':pdv'       => $pdv->attributes()['id'],
                 ':latitude' => $pdv->attributes()['latitude']/100000,
