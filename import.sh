@@ -1,6 +1,6 @@
 #!/bin/bash
 file=$(date '+%Y%m%d')
-tempDir="temp/"
+tempDir="temp"
 url="https://donnees.roulez-eco.fr/opendata/jour"
 
 wget -O $tempDir/$file $url
